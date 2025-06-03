@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        /* Popup Styling */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>वीडियो कोर्स - शैक्षिक पाठ्यक्रम</title>
+  <style>
+      /* Popup Styling */
         .popup {
             position: fixed;
             top: 0;
@@ -47,50 +46,6 @@
         #main-content {
             display: none;
         }
-    </style>
-</head>
-<body>
-    <!-- Popup -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>Enter Code</h2>
-            <input type="text" id="userInput" placeholder="Enter code here">
-            <br>
-            <button onclick="checkInput()">Submit</button>
-            <p class="error" id="error">Incorrect code! Try again.</p>
-        </div>
-    </div>
-
-  
-    <script>
-        function checkInput() {
-            const input = document.getElementById('userInput').value;
-            const correctText = 'Thankyou'; // Case-sensitive
-            if (input === correctText) {
-                document.getElementById('popup').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            } else {
-                document.getElementById('error').style.display = 'block';
-                document.getElementById('userInput').value = ''; // Clear input on error
-            }
-        }
-
-        // Allow Enter key to submit
-        document.getElementById('userInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkInput();
-            }
-        });
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="hi">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>वीडियो कोर्स - शैक्षिक पाठ्यक्रम</title>
-  <style>
     * {
       margin: 0;
       padding: 0;
@@ -329,7 +284,17 @@
   <header>
     <h1>शैक्षिक वीडियो कोर्स</h1>
   </header>
-
+        <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Enter Code</h2>
+            <input type="text" id="userInput" placeholder="Enter code here">
+            <br>
+            <button onclick="checkInput()">Submit</button>
+            <p class="error" id="error">Incorrect code! Try again.</p>
+        </div>
+    </div>
+    
   <div class="color-picker" onclick="toggleColorPalette()"></div>
   <div class="color-palette" id="color-palette">
      <div class="color-option" style="background-color: #8a2be2;" data-theme="purple"></div>
@@ -1403,6 +1368,24 @@
   </footer>
 
   <script type="text/javascript">
+      function checkInput() {
+            const input = document.getElementById('userInput').value;
+            const correctText = 'Thankyou'; // Case-sensitive
+            if (input === correctText) {
+                document.getElementById('popup').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('userInput').value = ''; // Clear input on error
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkInput();
+            }
+        });
     var gk_isXlsx = false;
     var gk_xlsxFileLookup = {};
     var gk_fileData = {};
