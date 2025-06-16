@@ -1946,6 +1946,19 @@ body {
   </footer>
 
   <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.querySelector('.loader');
+  const mainContent = document.querySelector('.main-content');
+
+  // Show loader for 3 seconds, then transition to main content
+  setTimeout(() => {
+    loader.classList.add('hidden'); // Fade out loader
+    mainContent.style.display = 'flex'; // Show main content
+    setTimeout(() => {
+      mainContent.classList.add('visible'); // Fade in main content
+    }, 50); // Small delay to ensure display change is applied
+  }, 3000); // 3-second delay
+});
     var gk_isXlsx = false;
     var gk_xlsxFileLookup = {};
     var gk_fileData = {};
