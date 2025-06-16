@@ -9,54 +9,6 @@
   <title>वीडियो कोर्स - शैक्षिक पाठ्यक्रम</title>
 </head>
   <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  display: grid;
-  place-items: center;
-  height: 100dvh;
-  background: var(--surface);
-  margin: 0;
-  overflow: hidden; /* Prevent scrolling during loading */
-}
-
-/* New Styles for Loader and Main Content */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--surface);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 1;
-  transition: opacity 0.5s ease-out;
-}
-
-.loader.hidden {
-  opacity: 0;
-  pointer-events: none; /* Prevent interaction with loader after it fades */
-}
-
-.main-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-.main-content.visible {
-  opacity: 1;
-}
     * {
       margin: 0;
       padding: 0;
