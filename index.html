@@ -243,6 +243,31 @@
         right: 10px;
       }
     }
+
+    .video-card-wrapper {
+  position: relative;
+}
+
+.floating-notes-button {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px var(--glow-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 10;
+}
+
+.floating-notes-button:hover {
+  transform: scale(1.1);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 25px var(--glow-color-bright);
+}
   </style>
 </head>
 
@@ -839,8 +864,10 @@
         <a href="pro_mp4_player.html?video=https%3A%2F%2Fapps-s3-jw-prod.utkarshapp.com%2Fadmin_v1%2Ffile_library%2Fvideos%2Fenc_plain_mp4%2F2597689%2Fplain%2F720x1280.mp4" aria-label="वीडियो चलाएँ: Part-4 राजस्थान में जनजाति आन्दोलन">वीडियो चलाएँ</a>
     </div>
 </div>
-
       
+      <div class="video-card-wrapper">
+  <!-- 🔥 Notes Button above card -->
+  <a href="notes.html" class="floating-notes-button">📘 Notes</a>
       <!-- Video -->
       <div class="video-card">
         <img src="https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/thumbnail/4953543_Art%20%26%20Culture.png" alt="Art & Culture Thumbnail" loading="lazy">
