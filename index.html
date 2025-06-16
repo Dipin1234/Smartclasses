@@ -123,6 +123,23 @@
       gap: 2rem;
     }
 
+    .round-button {
+      background-color: #1E90FF;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 15px #1E90FF88;
+    }
+
+    .round-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #1E90FF;
+    }
+
     .video-card {
       background-color: rgba(13, 13, 13, 0.8);
       border: 1px solid var(--primary-color);
@@ -837,8 +854,9 @@
     </div>
 </div>
 
-      <button onclick="window.location.href='notes.html';">Open Notes</button>
-
+      <button class="round-button" onclick="window.location.href='notes.html'">
+    📘 Open Notes
+      </button>
       <!-- Video -->
       <div class="video-card">
         <img src="https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/thumbnail/4953543_Art%20%26%20Culture.png" alt="Art & Culture Thumbnail" loading="lazy">
