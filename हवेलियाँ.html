@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>हवेलियाँ</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        .controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .menu-button {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .menu-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+        }
+        .round-button {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            opacity: 0;
+            transform: scale(0);
+            top: 0;
+            right: 0;
+        }
+        .controls.active .round-button {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .round-button:nth-child(2) {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53); /* Dark Mode */
+            transition-delay: 0.1s;
+            top: 56px;
+            right: 0;
+        }
+        .round-button:nth-child(3) {
+            background: linear-gradient(135deg, #1e90ff, #00b4d8); /* Font + */
+            transition-delay: 0.2s;
+            top: 112px;
+            right: 0;
+        }
+        .round-button:nth-child(4) {
+            background: linear-gradient(135deg, #2ecc71, #27ae60); /* Font - */
+            transition-delay: 0.3s;
+            top: 168px;
+            right: 0;
+        }
+        .round-button:nth-child(5) {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad); /* Print */
+            transition-delay: 0.4s;
+            top: 224px;
+            right: 0;
+        }
+        .round-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+        }
+        .round-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .round-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+        .round-button:hover::before {
+            width: 100px;
+            height: 100px;
+        }
+        .menu-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+        .menu-button:hover::before {
+            width: 100px;
+            height: 100px;
+        }
+        .round-button span, .menu-button span {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button class="menu-button" onclick="toggleMenu()" title="Toggle Menu"><span>☢️</span></button>
+        <button class="round-button" onclick="toggleDarkMode()" title="Toggle Dark Mode"><span>🌙</span></button>
+        <button class="round-button" onclick="increaseFontSize()" title="Increase Font Size"><span>+</span></button>
+        <button class="round-button" onclick="decreaseFontSize()" title="Decrease Font Size"><span>-</span></button>
+        <button class="round-button" onclick="printPage()" title="Print Page"><span>🖨️</span></button>
+    </div>
+    <!--copy paste🤣🤣🤣😂-->
+<p style="text-align:center"><span style="color:#ff0000"><span style="font-size:18px"><span style="font-family:Arial,Helvetica,sans-serif"><strong>हवेलियाँ</strong></span></span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- राजस्थान में जैसलमेर को <strong>&lsquo;हवेलियों का शहर&rsquo;</strong> तथा बीकानेर को <strong>&lsquo;हजार हवेलियों</strong> <strong>का शहर&rsquo;</strong> कहा जाता है।</span></span></p>
+
+<p style="text-align:center"><span style="color:#e74c3c"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif"><strong>जैसलमेर की हवेलियाँ</strong></span></span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">पटवों की हवेली &nbsp;</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- इस हवेली का निर्माण सेठ गुमानचन्द पटवा द्वारा 18वीं सदी के उत्तरार्द्ध में करवाया गया।&nbsp;<br />
+- यह हवेली अपनी शिल्पकला, नक्काशी एवं पत्थर में बारीक कटाई के लिए प्रसिद्ध है।&nbsp;<br />
+- 5 मंजिला एवं 66 झरोखों से युक्त यह सबसे बड़ी हवेली है।&nbsp;<br />
+- पटवों की हवेली विश्व की एकमात्र हवेली है जिसकी खिड़कियाँ पत्थर की बनी हुई हैं।&nbsp;<br />
+- पटवों की हवेली पाँच हवेलियों से मिलकर बनी हैं।<br />
+- इसमें एक हवेली के &lsquo;दीपघरों&rsquo; के शीशों पर ग्वालियर के मराठा शासक महादजी सिन्धिया को अंकित किया गया है।</span></span></p>
+
+<p style="text-align:center"><br />
+<span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif"><strong><span style="color:#3498db">सालिमसिंह की हवेली&nbsp;</span></strong></span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- इस हवेली का निर्माण जैसलमेर के प्रधानमंत्री सालिमसिंह द्वारा 18वीं सदी में करवाया गया था।&nbsp;<br />
+- इस नौ खण्डी हवेली के प्रथम सात खण्ड पत्थर के और ऊपरी दो खण्ड लकड़ी के बने हुए थे। जिसको बाद में लकड़ी के दोनों खण्ड उतार लिए गए थे।</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">नथमल की हवेली&nbsp;</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- इस हवेली का निर्माण महारावल बैरीसाल के समय हुआ है।&nbsp;<br />
+- इस हवेली के शिल्पकार &lsquo;हाथी&rsquo; एवं &lsquo;लालू&rsquo; थे।&nbsp;<br />
+- इस हवेली में प्रयुक्त शिल्प को दोहराया नहीं गया इसी कारण इसका शिल्प अनूठा है।</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#ff0000"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">बीकानेर की हवेलियाँ</span></span></span></strong></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">बच्छावतों की हवेली</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- बीकानेर की सबसे पुरानी हवेली है।&nbsp;<br />
+- इस हवेली का निर्माण 1593 ई. में कर्णसिंह बच्छावत ने लाल पत्थरों से करवाया था।</span></span></p>
+
+<p style="text-align:center"><span style="color:#3498db"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">रामपुरिया की हवेलियाँ</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- बीकानेर में स्थित</span></span> <span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">यह हवेलियाँ अपने विशाल आँगन और स्थापत्य कला के कारण विश्व विख्यात हैं।&nbsp;<br />
+- रिखजी बागड़ी की हवेली (3 मंजिला) - बीकानेर<br />
+- पूनमचंद जी कोठारी की हवेली - बीकानेर<br />
+- भैरोंदान जी कोठारी की हवेली - बीकानेर<br />
+- लक्ष्मीनारायण डागा की हवेली को &lsquo;गोल्डन किंग&rsquo; की हवेली के रूप में जाना जाता है।<br />
+- वर्ष 2012 में बीकानेर की हवेलियों को &lsquo;वर्ल्ड मोन्यूमेंट वॉच&rsquo; कार्यक्रम में शामिल किया गया था।<br />
+- मोहता की हवेली<br />
+- मूंदड़ा की हवेली&nbsp;</span></span></p>
+
+<p style="text-align:center"><span style="color:#ff0000"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">जोधपुर की हवेलियाँ</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- पाल हवेली<br />
+- बड़े मियाँ की हवेली<br />
+- पोकरण की हवेली<br />
+- पच्चीसा हवेली<br />
+- राखी हवेली<br />
+- पुष्य हवेली&nbsp;</span></span></p>
+
+<p style="text-align:center"><span style="color:#3498db"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">खींचन</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- गोलेछा की हवेली<br />
+- टाटिया की हवेली</span></span></p>
+
+<p style="text-align:center"><span style="color:#ff0000"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">शेखावाटी की हवेलियाँ</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- रामगढ़, नवलगढ़, मण्डावा, मुकुन्दगढ़, पिलानी आदि कस्बों की उत्कृष्ट हवेलियाँ हैं जो अपने भित्ति चित्रण के लिए विश्व विख्यात है।<br />
+- शेखावाटी की हवेलियों के भित्ति चित्रण में पौराणिक, ऐतिहासिक विविध विषयों का चयन, स्वर्ण व प्राकृतिक रंगों का प्रयोग तथा फ्रेस्को बुनो, फ्रेस्को सेको व फ्रेस्को सिम्पल विधियों का प्रयोग किया गया है।</span></span></p>
+
+<p style="text-align:center"><span style="color:#ff0000"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">झुंझुनूँ की हवेलियाँ</span></span></strong></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">ईसरदास मोदी की हवेली</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- झुंझुनूँ की &lsquo;शताधिक खिड़कियों&rsquo; के लिए विश्वविख्यात है।&nbsp;<br />
+- टीबड़ेवाला की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">नवलगढ़</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- नवलगढ़ को <strong>&lsquo;हवेलियों का नगर&rsquo;</strong> अथवा <strong>&lsquo;शेखावाटी की स्वर्ण नगरी&rsquo;</strong> कहा जाता है।&nbsp;<br />
+- पौद्दारों की हवेली<br />
+- भगतों की हवेलियाँ<br />
+- टीबड़े वाला की हवेलियाँ<br />
+- भगोरिया की हवेली।&nbsp;<br />
+- आठ हवेली कॉम्प्लेक्स<br />
+- चौखानी परिवार की हवेली<br />
+- रूपनिवास महल हवेली<br />
+- खुर्रेदार चबूतरों की हवेलियाँ&nbsp;<br />
+- मोरारका की हवेली<br />
+- जालान की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">बिसाऊ</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- नाथूराम पोद्दार की हवेली<br />
+- सेठ जयदयाल केड़िया की हवेली<br />
+- सीताराम सिंगतिया की हवेली<br />
+- सेठ हीरालाल &ndash; बनारसीलाल की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">महनसर</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- सोने-चाँदी की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">मण्डावा</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- सागरमल लाडिया की हवेली<br />
+- रामदेव चौखाणी की हवेली<br />
+- मण्डावा की हवेली&nbsp;</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">पिलानी</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- बिरला हवेली&nbsp;</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">डूंडलोद</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- सेठ लालचन्द गोयनका की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">मुकुन्दगढ़</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- सेठ राधाकृष्ण की हवेली<br />
+- केसरदेव कानोड़िया की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">चिड़ावा</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- बागड़ियों की हवेली<br />
+- डालमिया की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#ff0000"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">सीकर की हवेलियाँ</span></span></span></strong></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">श्रीमाधोपुर</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- पंसारी की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">फतेहपुर</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- नन्दलाल देवड़ा की हवेली<br />
+- ताराचन्द रुइयाँ की हवेली<br />
+- कन्हैयालाल गोयनका की हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">लक्ष्मणगढ़</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- केड़िया की हवेली<br />
+- राठी की हवेली<br />
+- चार<strong> </strong>चौक<strong> </strong>की<strong> </strong>हवेली<br />
+- चेतराम<strong> </strong>की<strong> </strong>हवेली</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#3498db"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">रामगढ़</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- रामगढ़, शेखावाटी क्षेत्र की &lsquo;धनाढ्य सेठों की नगरी&rsquo; कहलाती है।&nbsp;<br />
+- बैजनाथ रुइयाँ की हवेली<br />
+- ताराचन्द रुइयाँ की हवेली<br />
+- खेमका सेठों की हवेलियाँ</span></span></p>
+
+<p style="text-align:center"><span style="color:#ff0000"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">चूरू की हवेलियाँ</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- मंत्रियों की हवेली<br />
+- सुराणों की हवेली<br />
+- रामनिवास गोयनका की हवेली<br />
+- दानचंद चोपड़ा की हवेली - &nbsp;सुजानगढ़ (चूरू)<br />
+- मालजी का कमरा - मालचंद कोठारी द्वारा निर्मित।</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#ff0000"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">उदयपुर की हवेलियाँ</span></span></span></strong></p>
+
+<p><span style="color:#3498db"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">बागौर की हवेली</span></span></strong></span><br />
+<span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- उदयपुर में पिछोला झील के निकट बागौर की हवेली का निर्माण ठाकुर अमरचंद बड़वा ने करवाया।&nbsp;<br />
+- 1986 में यहाँ पर पश्चिमी क्षेत्र सांस्कृतिक केन्द्र को स्थापित किया गया है।&nbsp;<br />
+- इसी हवेली में विश्व की सबसे बड़ी पगड़ी रखी हुई है।&nbsp;<br />
+- बाफना की हवेली<br />
+- मोहनसिंह जी की हवेली<br />
+- पिपलिया की हवेली।</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#ff0000"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">कोटा की हवेलियाँ</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- बड़े देवता की हवेली - इसे देवता श्रीधरजी की हवेली भी कहा जाता है।<br />
+- झालाजी की हवेली - जालिमसिंह द्वारा निर्मित हवेली।</span></span></p>
+
+<p style="text-align:center"><span style="color:#ff0000"><strong><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">जयपुर की हवेलियाँ</span></span></strong></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- पुरोहित जी की हवेली<br />
+- नाटाणियों की हवेली<br />
+- ख्वास जी की हवेली<br />
+- धाबाईजी की दीवान साहब की हवेली<br />
+- रत्नाकर पुण्डरीक की हवेली<br />
+- चूड़सिंह की हवेली (आमेर में)<br />
+- नानाजी की हवेली।</span></span></p>
+
+<p style="text-align:center"><strong><span style="color:#ff0000"><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">झालावाड़ &nbsp;की हवेलियाँ</span></span></span></strong></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif">- काले बाबू की हवेली<br />
+- सात खाँ की हवेली<br />
+- गुलजार हवेली<br />
+- दीवान साहब की हवेली</span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:Arial,Helvetica,sans-serif"><strong>अन्य<strong> </strong>हवेलियाँ&ndash;</strong><br />
+- बादशाह की हवेली (अकबर के समय निर्मित) - अजमेर<br />
+- वंशी पत्थर की हवेली &ndash; करौली</span></span></p>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.controls').classList.toggle('active');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function increaseFontSize() {
+            let currentSize = parseFloat(window.getComputedStyle(document.body).fontSize);
+            document.body.style.fontSize = (currentSize + 2) + 'px';
+        }
+
+        function decreaseFontSize() {
+            let currentSize = parseFloat(window.getComputedStyle(document.body).fontSize);
+            if (currentSize > 10) {
+                document.body.style.fontSize = (currentSize - 2) + 'px';
+            }
+        }
+
+        function printPage() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
