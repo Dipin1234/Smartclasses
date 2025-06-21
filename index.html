@@ -268,12 +268,39 @@
   background-color: var(--secondary-color);
   box-shadow: 0 0 25px var(--glow-color-bright);
 }
+    .button-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    text-align: right; /* Aligns button to the right */
+}
+
+.notes-button {
+    display: inline-block;
+    background-color: var(--primary-color); /* Neon green */
+    color: var(--button-text-color); /* Black text */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid var(--light-color);
+    box-shadow: 0 0 10px var(--glow-color);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.notes-button:hover {
+    background-color: var(--secondary-color); /* Darker green on hover */
+    box-shadow: 0 0 15px var(--glow-color-bright);
+    transform: scale(1.05);
+}
   </style>
 </head>
 
 <body>
   <header>
     <h1>शैक्षिक वीडियो कोर्स</h1>
+    <a href="Utnotes.html" class="notes-button">Go to notes</a>
+
   </header>
 
   <div class="color-picker" onclick="toggleColorPalette()"></div>
